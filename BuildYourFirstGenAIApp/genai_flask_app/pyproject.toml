@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "genai-flask-app"
+version = "0.1.0"
+description = "GenAI Flask app using IBM Watsonx LLMs (Llama, Granite, Mistral)"
+requires-python = ">=3.10"
+
+dependencies = [
+    "flask",
+    "langchain-ibm",
+    "langchain-core",
+    "pydantic",
+    "ibm-watsonx-ai",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-flask",
+]
